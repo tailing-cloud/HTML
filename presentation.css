@@ -1,0 +1,78 @@
+﻿/* --- 1. 基礎與導覽列樣式 --- */
+body {
+  width: 100%; 
+  max-width: 960px;		
+  margin: 0 auto; 
+  padding: 0px;
+  font-family: "Microsoft JhengHei", sans-serif;
+  background-image: url(image/back.png); 
+  background-repeat: repeat;
+}
+
+header, nav, footer, main {
+  width: 96%; 
+  margin: 0 auto;
+  display: block;
+}
+
+nav {
+  background: #f5f5f5; 
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #eaeaea;	
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px; 
+  padding: 10px;
+}
+
+.a-li { text-decoration: none; color: black; }
+
+/* --- 2. 內文對齊與行高優化 --- */
+
+
+/* 標題樣式：模擬截圖中的黑色垂直條 */
+main h2 {
+  font-size: 1.5em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+/* 內文對齊與行高關鍵設定 */
+main p {
+  text-align: justify;      /* 左右對齊 */
+  text-justify: inter-ideograph; /* 針對中文字優化對齊 */
+  line-height: 1.8;         /* 增加行高，提升閱讀舒適度 */
+  margin-bottom: 20px;      /* 段落間距 */
+}
+
+/* 清單項目間距與內縮 */
+main ul {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+main li {
+  line-height: 1;           /* 清單行高稍微拉大 */
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+/* --- 3. 頁尾與返回鍵 --- */
+hr { 
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  margin: 30px 0;
+}
+
+.a-back {
+  display: block; 
+  text-decoration: none; 
+  color: #0066ff; 
+  text-align: right;
+}
