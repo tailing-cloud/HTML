@@ -1,4 +1,4 @@
-﻿/* --- 基礎與導覽列樣式 --- */
+/* --- 基礎與導覽列樣式 --- */
 body {
   width: 100%; 
   max-width: 960px;		
@@ -108,14 +108,8 @@ nav ul li {
   text-align: right;
   margin: 20px 0;
 }
+
 @media screen and (max-width: 460px) {
-	.tabs label {
-    display: block;      /* 按鈕垂直排列 */
-    width: 100%;
-    margin-right: 0;
-    text-align: center;
-    box-sizing: border-box;
-  }
   nav ul {
     display: flex;
     flex-wrap: wrap;      /* 讓項目在空間不足時自動換行 */
