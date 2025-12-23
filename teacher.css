@@ -101,6 +101,14 @@ nav ul li {
 
 .a-detail:hover { text-decoration: underline; }
 
+.a-back {
+  display: block; 
+  text-decoration: none; 
+  color: #0066ff; 
+  font-family: "Arial"; 
+  text-align: right;
+  margin: 10px 0px;
+}
 /* --- 4. RWD 響應式佈局 --- */
 
 /* 平板版 (2 欄) */
@@ -151,4 +159,5 @@ nav ul li {
 }
 
 hr { border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 20px 0; }
+
 
