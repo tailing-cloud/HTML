@@ -26,6 +26,8 @@ nav ul li {
   display: inline;
   margin-right: 10px; 
   padding: 10px;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .a-li { text-decoration: none; color: black; }
@@ -112,3 +114,4 @@ hr {
     display: block;
   }
 }
+
