@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>教授介紹 - 中臺科大資管系</title>
+  <style>
+    /* --- 1. 基礎設定 --- */
+    body {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0;
+      font-family: "Microsoft JhengHei", sans-serif;
+      background-color: #f9f9f9;
+	   background-image: url(../image/back.png); 
+      background-repeat: repeat;
+    }
+
+    /* --- 2. 教授介紹主容器 --- */
+    .faculty-container {
+      width: 96%;           /* 統一對齊寬度 */
+      margin: 40px auto 20px auto;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    /* 紫藍色頂部標題列 */
+    .faculty-header {
+      background-color: #797db1; 
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .faculty-profile {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 280px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    /* 姓名連結樣式 (點擊開啟 PDF) */
+    .profile-name a {
+      color: #222e7a;       /* 深藍色姓名 */
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .profile-name a:hover {
+      color: #a12830;       /* 滑過時變色 */
+      text-decoration: underline;
+    }
+
+    .profile-title {
+      color: #222e7a;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    /* --- 3. 紅灰交錯資訊表格 --- */
+    .info-table {
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      min-height: 45px;
+      margin-bottom: 2px;
+    }
+
+    .dark-red { background-color: #a12830; color: white; }
+    .light-gray { background-color: #f2f2f2; color: #a12830; }
+
+    .label {
+      flex: 0 0 120px;
+      text-align: right;
+      font-weight: bold;
+      padding-right: 20px;
+      border-right: 3px solid #fff;
+    }
+
+    .value {
+      flex: 1;
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    /* --- 4. 底部返回按鈕 --- */
+    .footer-nav {
+      width: 96%;
+      margin: 20px auto 50px auto;
+      text-align: center;
+    }
+
+    .btn-back {
+      display: inline-block;
+      padding: 10px 30px;
+      background-color: #222e7a;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-back:hover {
+      background-color: #797db1;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    @media screen and (max-width: 600px) {
+      .label { flex: 0 0 80px; }
+      .profile-pic { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="faculty-container">
+    <div class="faculty-header">副教授</div>
+
+    <div class="faculty-profile">
+      <img src="../image/3.jpeg" alt="陳昌助副教授" class="profile-pic">
+      
+      <div class="profile-name">
+        <a href="../pdf/2-1.pdf" target="_blank">陳昌助 Chen Chang-Chu</a>
+        <p class="profile-title">副教授</p>
+      </div>
+
+      <div class="info-table">
+        <div class="info-row dark-red">
+          <div class="label">學歷 <span style="margin-left:5px;">■</span></div>
+          <div class="value">國立中正大學資訊工程博士</div>
+        </div>
+        <div class="info-row light-gray">
+          <div class="label">分機 <span style="margin-left:5px;">■</span></div>
+          <div class="value">04-22391647 #7709  #6400</div>
+        </div>
+        <div class="info-row dark-red">
+          <div class="label">辦公室 <span style="margin-left:5px;">■</span></div>
+          <div class="value">2320B ，8603</div>
+        </div>
+        <div class="info-row light-gray">
+          <div class="label">Email <span style="margin-left:5px;">■</span></div>
+          <div class="value">ccchen@ctust.edu.tw</div>
+        </div>
+        <div class="info-row dark-red">
+          <div class="label">專長 <span style="margin-left:5px;">■</span></div>
+          <div class="value">數位內容、系統開發、網頁設計</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-nav">
+    <a href="../teacher.html" class="btn-back">← 返回老師介紹</a>
+  </div>
+
+</body>
+</html>
