@@ -105,6 +105,8 @@ nav ul li {
   font-weight: bold;
 }	
 
+.a-detail:hover { text-decoration: underline; }
+
 .a-back {
   display: block; 
   text-align: right;
@@ -148,4 +150,5 @@ nav ul li {
 }
 
 hr { border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 20px 0; }
+
 
