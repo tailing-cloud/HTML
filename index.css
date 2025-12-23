@@ -1,4 +1,4 @@
-﻿/* --- 1. 基礎與共用樣式 --- */
+/* --- 1. 基礎與共用樣式 --- */
 body {
   width: 100%; 
   max-width: 960px;		
@@ -222,6 +222,7 @@ input:checked + label {
 /* --- 6. RWD 響應式設定 --- */
 
 /* 手機版 (寬度小於 460px) */
+
 @media screen and (max-width: 460px) {
 	.tabs label {
     display: block;      /* 按鈕垂直排列 */
@@ -264,6 +265,7 @@ input:checked + label {
     display: block;
   }
 }
+
 /* 平板版 (寬度 481px ~ 768px) */
 @media screen and (min-width: 481px){
   .video-item {
@@ -278,6 +280,4 @@ input:checked + label {
     width: 31%;           /* 呈現您要求的 3 欄影片 */
   }
   .tour { width: 23%; float: left; margin: 0 1%; }
-
 }
-
