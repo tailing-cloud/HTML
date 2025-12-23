@@ -114,4 +114,46 @@ hr { border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 20px 0; }
     width: 23%;           
     margin: 1%;
   }
+@media screen and (max-width: 460px) {
+	.tabs label {
+    display: block;      /* 按鈕垂直排列 */
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;      /* 讓項目在空間不足時自動換行 */
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  nav ul li {
+    display: block;
+    width: 45%;           /* 一排顯示兩個按鈕，解決擁擠問題 */
+    margin: 5px;          /* 按鈕間距 */
+    padding: 0;           /* 移除原始 inline padding */
+    text-align: center;
+    background: #ffffff;  /* 增加背景色讓它看起來更像按鈕 */
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+
+  .a-li {
+    display: block;
+    padding: 10px 0;      /* 擴大點擊範圍 */
+    white-space: nowrap;  /* 關鍵：強制文字（如名人榜）不換行 */
+    font-size: 16px;
+  }
+
+  /* 調整 Logo 縮放 */
+  div img[style*="width:80%"] {
+    width: 95% !important; /* 在手機上讓 Logo 稍微大一點 */
+    margin: 10px auto;
+    display: block;
+  }
+}
 }
