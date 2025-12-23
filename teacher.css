@@ -1,4 +1,4 @@
-﻿/* --- 1. 基礎與導覽列 --- */
+/* --- 1. 基礎與共用樣式 --- */
 body {
   width: 100%; 
   max-width: 960px;		
@@ -9,13 +9,15 @@ body {
   background-repeat: repeat;
 }
 
-header, nav, footer {
+header, nav, footer, .card-container {
   width: 96%; 
   margin: 0 auto;
   display: block; 
 }
 
+/* --- 2. 導覽列樣式：比照首頁與名人榜之整齊外觀 --- */
 nav {
+  display: block;	
   background: #f5f5f5; 
   border: 1px solid #eaeaea;
   border-radius: 5px;
@@ -28,100 +30,89 @@ nav ul li {
   padding: 10px;
 }
 
-.a-li { text-decoration: none; color: black; }
+.a-li {
+  text-decoration: none; 
+  color: black;
+}
 
-/* --- 2. 核心排版：Flexbox 解決重疊與對齊 --- */
+/* --- 3. 文字與卡片樣式：完全對齊 Celebrity List --- */
 .card-container {
   display: flex;
-  flex-wrap: wrap;        /* 寬度不足時自動換行 */
-  align-items: stretch;   /* 讓同一列的卡片高度撐到一樣長 */
+  flex-wrap: wrap;        /* 自動換行 */
+  align-items: stretch;   /* 讓同一列卡片高度對齊 */
   width: 96%;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .tour {
   display: flex;
-  flex-direction: column; /* 讓卡片內部垂直排列 */
+  flex-direction: column;
   width: 100%;            /* 手機版 1 欄 */
   margin-bottom: 30px;
-  background: rgba(255, 255, 255, 0.6);
+  /* 關鍵：比照名人榜之半透明霧面背景與陰影 */
+  background: rgba(255, 255, 255, 0.6); 
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.tour-header {
-  width: 100%;
-  background: #fff;       /* 避免不同比例圖片背景透出 */
-}
+.tour-header { width: 100%; }
 
-/* 核心修改：保留原始比例、不裁切 */
 .img-tour {
   width: 100%;
-  height: auto;           /* 依比例自動縮放，不強制裁切 */
+  height: auto;           /* 保留比例不裁切 */
   display: block;
 }
 
-/* 核心修改：移除鎖死的 270px 高度 */
+/* 文字格式核心設定：比照 Celebrity List */
 .tour-body {  	
   width: 100%;
-  padding: 15px;
+  padding: 15px;          /* 內縮邊距一致 */
   box-sizing: border-box;
-  text-align: justify;
-  flex-grow: 1;           /* 讓內容區域自動填滿剩餘空間，對齊下方按鈕 */
+  text-align: justify;    /* 👈 左右對齊 */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
 .tour-body h2 {
-  font-size: 1.1em;
-  color: #333;
-  margin-bottom: 8px;
+  font-size: 1.2em;       /* 標題大小一致 */
+  margin-bottom: 10px;
+  color: #333;            /* 顏色一致 */
 }
 
-
-.tour-footer {
-  margin-top: 15px;
+/* 內文行高與間距優化 */
+.tour-body p {
+  line-height: 1.8;       /* 增加行高提升舒適度 */
+  flex-grow: 1;
+  margin-bottom: 10px;
 }
 
-.a-detail, .a-back {
-  text-decoration: none; 
+/* 詳細資料：精準靠右 */
+.a-detail {
+  display: block;
+  text-align: right;      /* 👈 文字直接靠右 */
   color: #0066ff;
   font-weight: bold;
-}	
-
-.a-back {
-  display: block; 
-  text-align: right;
-  margin: 20px 0;
+  text-decoration: none;
 }
 
-hr { border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 20px 0; }
+.a-detail:hover { text-decoration: underline; }
 
-/* --- 3. RWD 響應式佈局 --- */
+/* --- 4. RWD 響應式佈局 --- */
 
 /* 平板版 (2 欄) */
-@media screen and (min-width: 481px){
-  .tour {
-    width: 48%;           
-    margin: 1%;
-  }
+@media screen and (min-width: 481px) {
+  .tour { width: 48%; margin: 1%; }
 }
-	  
+
 /* 電腦版 (4 欄) */
 @media screen and (min-width: 769px) {
-  .tour {
-    width: 23%;           
-    margin: 1%;
-  }
+  .tour { width: 23%; margin: 1%; }
+}
+
+/* --- 修正手機導覽列：比照首頁一排兩個且高度對齊 --- */
 @media screen and (max-width: 460px) {
-	.tabs label {
-    display: block;      /* 按鈕垂直排列 */
-    width: 100%;
-    margin-right: 0;
-    text-align: center;
-    box-sizing: border-box;
-  }
   nav ul {
     display: flex;
     flex-wrap: wrap;      /* 讓項目在空間不足時自動換行 */
@@ -156,4 +147,5 @@ hr { border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 20px 0; }
     display: block;
   }
 }
-}
+
+hr { border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 20px 0; }
